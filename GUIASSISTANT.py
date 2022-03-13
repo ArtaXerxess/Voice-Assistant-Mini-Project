@@ -3,22 +3,17 @@
 #########################
 # ai_name = 'F.R.I.D.Y.'.lower()
 ai_name = 'John'.lower()
-
 EXIT_COMMANDS = ['bye','exit','quit','shut down', 'shutdown']
-
 ownerName = "Harsh"
 ownerDesignation = "Sir"
 ownerPhoto = "1"
 rec_email, rec_phoneno = "", ""
 WAEMEntry = None
-
 avatarChoosen = 0
 choosedAvtrImage = None
-
 botChatTextBg = "#007cc7"
 botChatText = "white"
 userChatTextBg = "#4da8da"
-
 chatBgColor = '#12232e'
 background = '#203647'
 textColor = 'white'
@@ -28,7 +23,7 @@ voice_id = 0 #0 for female, 1 for male
 ass_volume = 1 #max volume
 ass_voiceRate = 200 #normal voice rate
 
-####################################### IMPORTING MODULES ###########################################
+# IMPORTING MODULES #
 """ User Created Modules """
 try:
 	import normalChat
@@ -58,11 +53,10 @@ try:
 	from threading import Thread
 except Exception as e:
 	print(e)
-
 if os.path.exists('userData')==False:
 	os.mkdir('userData')
 
-########################################## BOOT UP WINDOW ###########################################
+# BOOT UP WINDOW #
 def ChangeSettings(write=False):
 	import pickle
 	global background, textColor, chatBgColor, voice_id, ass_volume, ass_voiceRate, AITaskStatusLblBG, KCS_IMG, botChatTextBg, botChatText, userChatTextBg
@@ -167,7 +161,7 @@ def changeVoiceRate(e):
 
 ChangeSettings()
 
-############################################ SET UP VOICE ###########################################
+# SET UP VOICE #
 try:
 	engine = pyttsx3.init()
 	voices = engine.getProperty('voices')
@@ -176,8 +170,7 @@ try:
 except Exception as e:
 	print(e)
 
-
-####################################### SET UP TEXT TO SPEECH #######################################
+# SET UP TEXT TO SPEECH #
 def speak(text, display=False, icon=False):
 	AITaskStatusLbl['text'] = 'Speaking...'
 	if icon: Label(chat_frame, image=botIcon, bg=chatBgColor).pack(anchor='w',pady=0)
@@ -189,8 +182,12 @@ def speak(text, display=False, icon=False):
 	except:
 		print("Try not to type more...")
 
-####################################### SET UP SPEECH TO TEXT #######################################
+# SET UP SPEECH TO TEXT #
 def record(clearChat=True, iconDisplay=True):
+	"""
+	This method might not work the first time, so adjust the variables
+	accordingly.
+	"""
 	print('\nListening...')
 	AITaskStatusLbl['text'] = 'Listening...'
 	r = sr.Recognizer()
@@ -206,7 +203,7 @@ def record(clearChat=True, iconDisplay=True):
 			said =r.recognize_google(audio_data=audio,language='en-in')
 			print(f"\nUser said: {said}")
 			# if clearChat:
-			# 	clearChatScreen()
+			clearChatScreen()
 			if iconDisplay: Label(chat_frame, image=userIcon, bg=chatBgColor).pack(anchor='e',pady=0)
 			attachTOframe(said)
 		except Exception as e:
@@ -240,7 +237,8 @@ def keyboardInput(e):
 			Thread(target=main, args=(user_input,)).start()
 		UserField.delete(0, END)
 
-###################################### TASK/COMMAND HANDLER #########################################
+# TASK/COMMAND HANDLER #
+
 def isContain(txt, lst):
 	for word in lst:
 		if word in txt:
