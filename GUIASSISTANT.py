@@ -191,6 +191,7 @@ def record(clearChat=True, iconDisplay=True):
 	print('\nListening...')
 	AITaskStatusLbl['text'] = 'Listening...'
 	r = sr.Recognizer()
+# Adjust these according to your hardware:
 	# r.dynamic_energy_threshold = False
 	# r.energy_threshold = 4000
 	r.pause_threshold = 1
@@ -274,12 +275,7 @@ def main(text):
 			return
 
 		if 'list' in text:
-			if isContain(text, ['add', 'create', 'make']):
-				speak("What do you want to add?", True, True)
-				item = record(False, False)
-				ToDo.toDoList(item)
-				speak("Alright, I added to your list", True)
-				return
+			
 			if isContain(text, ['show', 'my list']):
 				items = ToDo.showtoDoList()
 				if len(items)==1:
@@ -288,7 +284,12 @@ def main(text):
 				attachTOframe('\n'.join(items), True)
 				speak(items[0])
 				return
-
+			if isContain(text, ['add', 'create', 'make']):
+				speak("What do you want to add?", True, True)
+				item = record(False, False)
+				ToDo.toDoList(item)
+				speak("Alright, I added to your list", True)
+				return
 		if isContain(text, ['battery', 'system info']):
 			result = appControl.OSHandler(text)
 			if len(result)==2:
@@ -510,16 +511,14 @@ def main(text):
 			#webScrapping.googleSearch(text) #uncomment this if you want to show the result on web, means if nothing found
 		
 
-##################################### DELETE USER ACCOUNT #########################################
+# DELETE USER ACCOUNT #
 def deleteUserData():
 	result = messagebox.askquestion('Alert', 'Are you sure you want to exit ?')
 	if result=='no': return
 	root.destroy()
-						#####################
-						####### GUI #########
-						#####################
 
-############ ATTACHING BOT/USER CHAT ON CHAT SCREEN ###########
+
+# ATTACHING BOT/USER CHAT ON CHAT SCREEN #
 def attachTOframe(text,bot=False):
 	if bot:
 		botchat = Label(chat_frame,text=text, bg=botChatTextBg, fg=botChatText, justify=LEFT, wraplength=250, font=('Montserrat',12, 'bold'))
@@ -532,12 +531,12 @@ def clearChatScreen():
 	for wid in chat_frame.winfo_children():
 		wid.destroy()
 
-### SWITCHING BETWEEN FRAMES ###
+# SWITCHING BETWEEN FRAMES #
 def raise_frame(frame):
 	frame.tkraise()
 	clearChatScreen()
 
-################# SHOWING DOWNLOADED IMAGES ###############
+# SHOWING DOWNLOADED IMAGES #
 img0, img1, img2, img3, img4 = None, None, None, None, None
 def showSingleImage(type, data=None):
 	global img0, img1, img2, img3, img4
@@ -587,13 +586,14 @@ def showImages(query):
 	Label(imageContainer, image=img3, bg='#EAEAEA').grid(row=1, column=1)
 
 
-############################# WAEM - WhatsApp Email ##################################
+# WAEM - WhatsApp Email #
 def sendWAEM():
 	global rec_phoneno, rec_email
 	data = WAEMEntry.get()
 	rec_email, rec_phoneno = data, data
 	WAEMEntry.delete(0, END)
 	appControl.Win_Opt('close')
+
 def send(e):
 	sendWAEM()
 
@@ -619,7 +619,7 @@ def WAEMPOPUP(Service='None', rec='Reciever'):
 	PopUProot.bind('<Return>', send)
 	PopUProot.mainloop()
 
-######################## CHANGING CHAT BACKGROUND COLOR #########################
+# CHANGING CHAT BACKGROUND COLOR #
 def getChatColor():
 	global chatBgColor
 	myColor = colorchooser.askcolor()
@@ -646,9 +646,9 @@ def changeChatMode():
 		root.focus()
 		chatMode=1
 
-#####################################  MAIN GUI ####################################################
+#  MAIN GUI #
 
-#### SPLASH/LOADING SCREEN ####
+# SPLASH/LOADING SCREEN #
 def progressbar():
 	s = ttk.Style()
 	s.theme_use('clam')
@@ -703,10 +703,8 @@ if __name__ == '__main__':
 	for f in (root1, root2, root3):
 		f.grid(row=0, column=0, sticky='news')	
 	
-	################################
-	########  CHAT SCREEN  #########
-	################################
-
+	##  CHAT SCREEN  ##
+	
 	#Chat Frame
 	chat_frame = Frame(root1, width=380,height=551,bg=chatBgColor)
 	chat_frame.pack(padx=10)
@@ -772,10 +770,8 @@ if __name__ == '__main__':
 	botIcon = botIcon.subsample(2,2)
 	
 
-	###########################
-	########  SETTINGS  #######
-	###########################
-
+	##  SETTINGS  ##
+	
 	settingsLbl = Label(root2, text='Settings', font=('Arial Bold', 15), bg=background, fg=textColor)
 	settingsLbl.pack(pady=10)
 	separator = ttk.Separator(root2, orient='horizontal')
