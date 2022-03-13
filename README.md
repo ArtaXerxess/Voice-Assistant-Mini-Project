@@ -1,5 +1,6 @@
 # Personal Assistant/Voice Assistant 
-## Modules Required:  
+## Modules Required:
+```
   SpeechRecognition  
   pyttsx3  
   playsound  
@@ -15,6 +16,7 @@
   wmi  
   geopy  
   googletrans==3.1.0a0
+```
 ## Common Installation Issues  
 ### USE WHEEL
 1. Go to [pyaudio unofficial binaries](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio) and download any of the previous versions.
@@ -33,8 +35,6 @@ example:
 >  pip install pipwin
 
 >  pip install pyaudio
-
-
 
 ## Features added:
 ### Wikipedia Result  

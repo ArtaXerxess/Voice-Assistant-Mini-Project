@@ -25,8 +25,6 @@
 ## Email Sender  
 - Send an email -> Receiver Email -> Subject -> Message  
 
-## WhatsApp Sender  
-- Send a whatsapp message -> Receiver Phone No -> Message  
 
 ## COVID Tracker  
 - What is the covid statistics?  
@@ -42,8 +40,6 @@
 - What is the definition of Machine Learning?  
 - What is the meaning of Natural Language Processing?  
 
-## ScreenShot  
-- Take a ScreenShot
 
 ## Timer  
 - Set a timer for 10 seconds  
@@ -65,8 +61,7 @@
 - Full Volume  
 
 ## YouTube  
-- Play Captain America Trailer on YouTube  
-- Google I/O on YouTube  
+- Play Hello by Adele on YouTube  
 
 ## Image Result  
 - Show the images of Robot  
@@ -75,6 +70,6 @@
 ## Typing Automation 
 - Open Notepad -> Say type " I'm currently not typing the text which I'm saying right now "
 - Select All  
-- Delete/Backspace  
+- Delete / Backspace  
 - Save that  
 - Press enter
