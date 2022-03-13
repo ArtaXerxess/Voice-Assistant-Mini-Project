@@ -60,9 +60,6 @@
 - Mute the Volume  
 - Full Volume  
 
-## YouTube  
-- Play Hello by Adele on YouTube  
-
 ## Image Result  
 - Show the images of Robot  
 - Show the images of Samosa  
