@@ -1,4 +1,4 @@
-
+# In BETA Stage
 
 ## Math Calculations 
 - What is the binary of 142?  
@@ -57,10 +57,6 @@
 ## OS Info  
 - Give my System Information  
 - What's my battery life  
-
-<!-- ## Selfie / Photo Clicker  
-- Take a Selfie  
-- Click a Photo   -->
 
 ## Volume Control  
 - Increase the Volume  
