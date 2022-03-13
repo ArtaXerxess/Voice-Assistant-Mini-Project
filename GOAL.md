@@ -66,7 +66,7 @@
 
 ## Typing Automation 
 - Open Notepad -> Say type " I'm currently not typing the text which I'm saying right now "
-- Select All  
+<!-- - Select All  
 - Delete / Backspace  
 - Save that  
-- Press enter
+- Press enter -->
