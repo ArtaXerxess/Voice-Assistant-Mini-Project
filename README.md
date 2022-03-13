@@ -37,6 +37,10 @@ example:
 >  pip install pyaudio
 
 ## Features added:
+
+### YouTube  
+- Play Hello by Adele on YouTube
+
 ### Wikipedia Result  
 - Who is Sundar Pichai?  
 - Who is Satya Nadella?
@@ -58,12 +62,7 @@ example:
 - Get the latest news  
 
 ### Weather  
-- What is the weather?  
-
-### Tab Operations  
-- Create new tab  
-- Switch Tab  
-- Close tab  
+- What is the weather?    
 
 ### System Apps  
 - Open Paint  
@@ -91,12 +90,7 @@ example:
 - Let's play a game  
   - Rock Paper Scissor
   - Mario  
-  - Online Games (BETA)  
-
-
-## YouTube  
-- Play Hello by Adele on YouTube  
-
+  - Online Games (BETA)
 
 ### Smart Reply  (BETA)
 - How are you?  
