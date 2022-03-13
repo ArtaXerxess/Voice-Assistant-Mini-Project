@@ -858,7 +858,6 @@ if __name__ == '__main__':
 		Thread(target=webScrapping.dataUpdate).start()
 	except Exception as e:
 		print('System is Offline...')
-	
 	root.iconbitmap('extrafiles/images/assistant2.ico')
 	raise_frame(root1)
 	root.mainloop()

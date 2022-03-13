@@ -1,22 +1,22 @@
 # Personal Assistant/Voice Assistant 
 ## Modules Required:
-```
-  SpeechRecognition  
-  pyttsx3  
-  playsound  
-  Pillow  
-  pyscreenshot  
-  pynput  
-  psutil  
-  wikipedia  
-  webbrowser [Available with installer]  
-  bs4  
-  smtplib [Available with installer]  
-  youtube_search  
-  wmi  
-  geopy  
-  googletrans==3.1.0a0
-```
+
+SpeechRecognition  
+pyttsx3  
+playsound  
+Pillow  
+pyscreenshot  
+pynput  
+psutil  
+wikipedia  
+webbrowser [Available with installer]  
+bs4  
+smtplib [Available with installer]  
+youtube_search  
+wmi  
+geopy  
+googletrans==3.1.0a0
+
 ## Common Installation Issues  
 ### USE WHEEL
 1. Go to [pyaudio unofficial binaries](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio) and download any of the previous versions.

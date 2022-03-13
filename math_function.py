@@ -1,10 +1,10 @@
 import math
+
 def basicOperations(text):
 	if 'root' in text:
 		temp = text.rfind(' ')
 		num = int(text[temp+1:])
 		return round(math.sqrt(num),2)
-
 	text = text.replace('plus', '+')
 	text = text.replace('minus', '-')
 	text = text.replace('x', '*')
@@ -78,5 +78,3 @@ def perform(text):
 	elif isHaving(text, ['shift','and','or','not']): return str(bitwiseOperations(text))
 	elif 'log' in text: return str(logFind(text))
 	else: return str(basicOperations(text))
-
-# print(round(math.log(1,10),2))
