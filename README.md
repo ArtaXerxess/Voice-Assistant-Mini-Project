@@ -60,12 +60,6 @@ example:
 
 ### Weather  
 - What is the weather?  
-  
-### Window Operations  
-- Open Window  
-- Close Window 
-- Switch Window  
-- Maximize/Minimize Window  
 
 ### Tab Operations  
 - Create new tab  
