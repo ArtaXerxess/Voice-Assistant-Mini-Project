@@ -39,8 +39,7 @@ example:
 ## Features added:
 ### Wikipedia Result  
 - Who is Sundar Pichai?  
-- Who is Satya Nadella?  
-- Artifical Intelligence on Wikipedia  
+- Who is Satya Nadella?
 
 ### Google Search  
 - Search for new technologies  
