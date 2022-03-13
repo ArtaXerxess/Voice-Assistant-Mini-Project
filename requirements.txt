@@ -1,0 +1,13 @@
+SpeechRecognition
+pyttsx3
+playsound
+Pillow
+pyscreenshot
+pynput
+psutil
+wikipedia
+beautifulsoup4
+youtube_search
+wmi
+geopy
+googletrans
