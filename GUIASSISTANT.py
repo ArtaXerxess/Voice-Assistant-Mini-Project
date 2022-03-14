@@ -1,7 +1,7 @@
 #########################
 # GLOBAL VARIABLES USED #
 #########################
-# ai_name = 'F.R.I.D.Y.'.lower()
+
 ai_name = 'John'.lower()
 EXIT_COMMANDS = ['bye','exit','quit','shut down', 'shutdown']
 ownerName = "Harsh"
