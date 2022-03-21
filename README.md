@@ -17,7 +17,7 @@ wmi
 geopy  
 googletrans==3.1.0a0
 
-## Common Installation Issues  
+## Common Installation Issue : pyaudio
 ### USE WHEEL
 1. Go to [pyaudio unofficial binaries](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio) and download any of the previous versions.
 
