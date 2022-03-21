@@ -663,7 +663,7 @@ def progressbar():
 		progress_bar['value'] += 5
 		# splash_percentage_label['text'] = str(progress_bar['value']) + ' %'
 		splash_root.update()
-		sleep(0.1)
+		# sleep(0.1)
 
 def destroySplash():
 	splash_root.destroy()
@@ -843,12 +843,10 @@ if __name__ == '__main__':
 	clearFaceBtn.place(x=120, y=250)
 
 	try:
-		# pass
 		Thread(target=voiceMedium).start()
 	except:
 		pass
 	try:
-		# pass
 		Thread(target=webScrapping.dataUpdate).start()
 	except Exception as e:
 		print('System is Offline...')
