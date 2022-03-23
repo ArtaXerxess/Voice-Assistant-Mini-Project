@@ -18,7 +18,7 @@ geopy
 googletrans==3.1.0a0
 
 ## Common Installation Issue : pyaudio
-### USE WHEEL
+### Use Wheel
 1. Go to [pyaudio unofficial binaries](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio) and download any of the previous versions.
 
 1. For more information refer the [details](http://people.csail.mit.edu/hubert/pyaudio/).
@@ -31,7 +31,8 @@ example:
 >  pip install .\PyAudio‑0.2.11‑cp310‑cp310‑win_amd64.whl
 
 ## OR
-### USE PIPWIN
+
+### Use pipwin
 ``` pip install pipwin ```
 
 ``` pip install pyaudio ```
