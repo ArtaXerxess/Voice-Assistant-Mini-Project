@@ -38,6 +38,15 @@ example:
 
 ## Features added:
 
+### Smart Reply  (BETA)
+- How are you?  
+- Who are you?  
+- Tell me something  
+- When is your birthday?  
+- You're so funny  
+- Thank You  
+- I'm sorry
+
 ### YouTube  
 - Play Hello by Adele on YouTube
 
@@ -77,10 +86,6 @@ example:
 - What is the time?  
 - What is the date today?  
 
-### Voice Changer  
-- Change your voice  
-- Change your voice to Male/Female voice  
-
 ### Website Opener  
 - Open GeekForGeeks  
 - Open GitHub  
@@ -90,12 +95,3 @@ example:
 - Let's play a game  
   - Rock Paper Scissor
   - Online Games (BETA)
-
-### Smart Reply  (BETA)
-- How are you?  
-- Who are you?  
-- Tell me something  
-- When is your birthday?  
-- You're so funny  
-- Thank You  
-- I'm sorry
