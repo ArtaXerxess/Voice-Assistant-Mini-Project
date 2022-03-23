@@ -1,3 +1,3 @@
 1. Make sure all the modules mentioned in the README.md are installed
-2. Now just open the GUIASSISTANT.py file to run
+2. Now just open GUIASSISTANT.py file and run it
 3. Enjoy

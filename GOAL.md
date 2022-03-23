@@ -10,7 +10,7 @@
 - what is the log of 1000  
 
 ## Files Creation  
-- Create a empty file  
+- Create an empty file  
 - Create a Python file  
 - Create a Java file  
 - Create a PowerPoint file  
@@ -22,7 +22,7 @@
 ## Google Maps Directions  
 - Give me directions -> Starting Location -> Destination Location  
 
-## Email Sender  
+## Email  
 - Send an email -> Receiver Email -> Subject -> Message  
 
 
