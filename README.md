@@ -89,7 +89,6 @@ example:
 ### Game  
 - Let's play a game  
   - Rock Paper Scissor
-  - Mario  
   - Online Games (BETA)
 
 ### Smart Reply  (BETA)
