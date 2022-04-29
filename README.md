@@ -127,7 +127,7 @@ example:
 
 # In BETA Stage  
 
-### Smart Reply  (BETA)
+### Smart Reply
 - How are you?  
 - Who are you?  
 - Tell me something  
