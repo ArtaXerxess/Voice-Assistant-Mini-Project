@@ -38,14 +38,6 @@ example:
 ``` pip install pyaudio ```
 ## Features added:
 
-### Smart Reply  (BETA)
-- How are you?  
-- Who are you?  
-- Tell me something  
-- When is your birthday?  
-- You're so funny  
-- Thank You  
-- I'm sorry
 
 ### YouTube  
 - Play Hello by Adele on YouTube
@@ -96,7 +88,9 @@ example:
   - Rock Paper Scissor
   - Online Games (BETA)
 
-# In BETA Stage
+## Image Result
+- Show the images of Germany
+- Show the images of Seafood
 
 ## Math Calculations 
 - What is the binary of 142?  
@@ -105,7 +99,7 @@ example:
 - What is the value of factorial 10?  
 - What is the value of Sin 90?  
 - 9 power 5  
-- what is the log of 1000  
+- what is the log of 1000
 
 ## Files Creation  
 - Create an empty file  
@@ -113,12 +107,39 @@ example:
 - Create a Java file  
 - Create a PowerPoint file  
 
+## Google Maps Directions  
+- Give me directions -> Starting Location -> Destination Location  
+
+
+## Timer  
+- Set a timer for 10 seconds  
+- Set a timer for 2 minutes  
+- Set a timer for 1 minute 10 seconds  
+## Volume Control  
+- Increase the Volume  
+- Decrease the Volume  
+- Mute the Volume  
+- Full Volume  
+
+## OS Info  
+- Give my System Information  
+- What's my battery life  
+
+# In BETA Stage  
+
+### Smart Reply  (BETA)
+- How are you?  
+- Who are you?  
+- Tell me something  
+- When is your birthday?  
+- You're so funny  
+- Thank You  
+- I'm sorry
+
+
 ## Web Automation (HTML Project)  
 - Create a HTML project -> Project Name  
 (It will create Empty Project for you with HTML, CSS and JavaScript file with some important codes)  
-
-## Google Maps Directions  
-- Give me directions -> Starting Location -> Destination Location  
 
 ## Email  
 - Send an email -> Receiver Email -> Subject -> Message  
@@ -138,28 +159,9 @@ example:
 - What is the definition of Machine Learning?  
 - What is the meaning of Natural Language Processing?  
 
-## Timer  
-- Set a timer for 10 seconds  
-- Set a timer for 2 minutes  
-- Set a timer for 1 minute 10 seconds  
-
 ## ToDo List  
 - Add an item to my list -> "This is my first Item in my list"  
 - Show my list  
-
-## OS Info  
-- Give my System Information  
-- What's my battery life  
-
-## Volume Control  
-- Increase the Volume  
-- Decrease the Volume  
-- Mute the Volume  
-- Full Volume  
-
-## Image Result
-- Show the images of Germany
-- Show the images of Seafood 
 
 ## Typing Automation 
 - Open Notepad -> Say type " I'm currently not typing the text which I'm saying clearly right now "
