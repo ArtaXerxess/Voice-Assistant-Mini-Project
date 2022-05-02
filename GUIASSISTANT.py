@@ -20,8 +20,8 @@ textColor = 'white'
 AITaskStatusLblBG = '#203647'
 KCS_IMG = 1 #0 for light, 1 for dark
 voice_id = 0 #0 for female, 1 for male
-ass_volume = 1 #max volume
-ass_voiceRate = 200 #normal voice rate
+Gvolume = 1 #max volume
+GvoiceRate = 200 #normal voice rate
 
 # IMPORTING MODULES #
 """ User Created Modules """
@@ -59,7 +59,7 @@ if os.path.exists('userData')==False:
 # BOOT UP WINDOW #
 def ChangeSettings(write=False):
 	import pickle
-	global background, textColor, chatBgColor, voice_id, ass_volume, ass_voiceRate, AITaskStatusLblBG, KCS_IMG, botChatTextBg, botChatText, userChatTextBg
+	global background, textColor, chatBgColor, voice_id, Gvolume, GvoiceRate, AITaskStatusLblBG, KCS_IMG, botChatTextBg, botChatText, userChatTextBg
 	setting = {'background': background,
 				'textColor': textColor,
 				'chatBgColor': chatBgColor,
@@ -69,8 +69,8 @@ def ChangeSettings(write=False):
 				'botChatTextBg': botChatTextBg,
 				'userChatTextBg': userChatTextBg,
 				'voice_id': voice_id,
-				'ass_volume': ass_volume,
-				'ass_voiceRate': ass_voiceRate
+				'Gvolume': Gvolume,
+				'GvoiceRate': GvoiceRate
 			}
 	if write:
 		with open('userData/settings.pck', 'wb') as file:
@@ -88,10 +88,10 @@ def ChangeSettings(write=False):
 			botChatTextBg = loadSettings['botChatTextBg']
 			userChatTextBg = loadSettings['userChatTextBg']
 			voice_id = loadSettings['voice_id']
-			ass_volume = loadSettings['ass_volume']
-			ass_voiceRate = loadSettings['ass_voiceRate']
+			Gvolume = loadSettings['Gvolume']
+			GvoiceRate = loadSettings['GvoiceRate']
 	except Exception as e:
-		pass
+		print(e)
 
 if os.path.exists('userData/settings.pck')==False:
 	ChangeSettings(True)
@@ -142,21 +142,21 @@ def changeVoice(e):
 	ChangeSettings(True)
 
 def changeVolume(e):
-	global ass_volume
-	ass_volume = volumeBar.get() / 100
-	engine.setProperty('volume', ass_volume)
+	global Gvolume
+	Gvolume = volumeBar.get() / 100
+	engine.setProperty('volume', Gvolume)
 	ChangeSettings(True)
 
 def changeVoiceRate(e):
-	global ass_voiceRate
+	global GvoiceRate
 	temp = voiceOption.get()
-	if temp=='Very Low': ass_voiceRate = 100
-	elif temp=='Low': ass_voiceRate = 150
-	elif temp=='Fast': ass_voiceRate = 250
-	elif temp=='Very Fast': ass_voiceRate = 300
-	else: ass_voiceRate = 200
-	print(ass_voiceRate)
-	engine.setProperty('rate', ass_voiceRate)
+	if temp=='Very Low': GvoiceRate = 100
+	elif temp=='Low': GvoiceRate = 150
+	elif temp=='Fast': GvoiceRate = 250
+	elif temp=='Very Fast': GvoiceRate = 300
+	else: GvoiceRate = 200
+	print(GvoiceRate)
+	engine.setProperty('rate', GvoiceRate)
 	ChangeSettings(True)
 
 ChangeSettings()
@@ -166,9 +166,9 @@ try:
 	engine = pyttsx3.init()
 	voices = engine.getProperty('voices')
 	engine.setProperty('voice', voices[voice_id].id) #male
-	engine.setProperty('volume', ass_volume)
+	engine.setProperty('volume', Gvolume)
 except Exception as e:
-	print(e)
+	print('text to speech variables not set properly\n',e)
 
 # SET UP TEXT TO SPEECH #
 def speak(text, display=False, icon=False):
@@ -208,7 +208,7 @@ def record(clearChat=True, iconDisplay=True):
 			if iconDisplay: Label(chat_frame, image=userIcon, bg=chatBgColor).pack(anchor='e',pady=0)
 			attachTOframe(said)
 		except Exception as e:
-			print(e)
+			print('speech to text variables not set correctly:\n\n',e)
 			# speak("I didn't get it, Say that again please...")
 			if "connection failed" in str(e):
 				speak("Your System is Offline...", True, True)
@@ -357,6 +357,7 @@ def main(text):
 				speak(webScrapping.youtube(text), True)
 			except Exception as e:
 				speak("Desired Result Not Found", True)
+				print(e)
 			return
 
 		if isContain(text, ['search', 'image']):
@@ -366,7 +367,7 @@ def main(text):
 				return
 			speak(webScrapping.googleSearch(text), True, True)
 			return
-			
+
 		if isContain(text, ['map', 'direction']):
 			if "direction" in text:
 				speak('What is your starting location?', True, True)
@@ -388,6 +389,8 @@ def main(text):
 			try:
 				speak(('Result is: ' + math_function.perform(text)), True, True)
 			except Exception as e:
+				speak(text="something went wrong, please try again")
+				print("from isContain funcion\n",e)
 				return
 			return
 
@@ -803,14 +806,14 @@ if __name__ == '__main__':
 	n2 = StringVar()
 	voiceOption = ttk.Combobox(settingsFrame, font=('Arial', 13), width=13, textvariable=n2)
 	voiceOption['values'] = ('Very Low', 'Low', 'Normal', 'Fast', 'Very Fast')
-	voiceOption.current(ass_voiceRate//50-2) #100 150 200 250 300
+	voiceOption.current(GvoiceRate//50-2) #100 150 200 250 300
 	voiceOption.place(x=150, y=60)
 	voiceOption.bind('<<ComboboxSelected>>', changeVoiceRate)
 	
 	volumeLbl = Label(settingsFrame, text='Volume', font=('Arial', 13), fg=textColor, bg=background)
 	volumeLbl.place(x=0, y=105)
 	volumeBar = Scale(settingsFrame, bg=background, fg=textColor, sliderlength=30, length=135, width=16, highlightbackground=background, orient='horizontal', from_=0, to=100, command=changeVolume)
-	volumeBar.set(int(ass_volume*100))
+	volumeBar.set(int(Gvolume*100))
 	volumeBar.place(x=150, y=85)
 
 

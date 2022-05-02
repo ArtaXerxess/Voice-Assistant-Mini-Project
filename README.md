@@ -1,21 +1,35 @@
 # Personal Assistant/Voice Assistant 
 ## Modules Required:
 
-SpeechRecognition  
-pyttsx3  
+SpeechRecognition  (for speech to text) (run `python -m speech_recognition` for a quick test)
+
+pyttsx3            (for text to speech)
+
+pillow             (imaging library)
+
+pynput             (to control and monitor input devices) 
+
+psutil             (to access system details and process utilities)
+
+bs4                (to scrape information from web pages)
+
+smtplib            (for sending emails using the Simple Mail Transfer Protocol SMPT)
+
+geopy              (to locate the coordinates of addresses, cities, countries, and landmarks across the globe using third-party geocoders and other data sources)
+
 playsound  
-Pillow  
-pyscreenshot  
-pynput  
-psutil  
+
+pyscreenshot
+
 wikipedia  
-webbrowser [Available with installer]  
-bs4  
-smtplib [Available with installer]  
+
 youtube_search  
+
 wmi  
-geopy  
+
 googletrans==3.1.0a0
+
+webbrowser
 
 ## Common Installation Issue : pyaudio
 ### Use Wheel
@@ -36,8 +50,15 @@ example:
 ``` pip install pipwin ```
 
 ``` pip install pyaudio ```
-## Features added:
 
+## Possible exception/Error
+If the system is offline the `record()` function may raise error because we are using google speech recognition engine.
+To fix that, install [pocketsphinx](https://pypi.org/project/pocketsphinx/) module or [snowboydetect](https://pypi.org/project/snowboy/)
+Then go to `GUIASSISTANT.py` and edit the `record()` function
+
+
+
+## Features added:
 
 ### YouTube  
 - Play Hello by Adele on YouTube
@@ -78,7 +99,7 @@ example:
 - What is the time?  
 - What is the date today?  
 
-### Website Opener  
+### Opening Websites  
 - Open GeekForGeeks  
 - Open GitHub  
 - Open CodeChef  
@@ -125,6 +146,14 @@ example:
 - Give my System Information  
 - What's my battery life  
 
+## Typing Automation 
+- Open Notepad -> Say type " I'm currently not typing the text which I'm saying clearly right now "
+
+## Smart Dictionary  
+- What is the definition of Machine Learning?  
+- What is the meaning of Natural Language Processing?  
+
+
 # In BETA Stage  
 
 ### Smart Reply
@@ -155,13 +184,7 @@ example:
 ## Translator  
 - Translate a sentence -> "Hello, how are you?" -> Hindi  
 
-## Smart Dictionary  
-- What is the definition of Machine Learning?  
-- What is the meaning of Natural Language Processing?  
 
 ## ToDo List  
 - Add an item to my list -> "This is my first Item in my list"  
 - Show my list  
-
-## Typing Automation 
-- Open Notepad -> Say type " I'm currently not typing the text which I'm saying clearly right now "

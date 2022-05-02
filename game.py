@@ -210,7 +210,6 @@ def play(gameName):
 	else:
 		print("Game Not Available")
 
-
 def showGames():
 	return "1. Rock Paper Scissor"
 
